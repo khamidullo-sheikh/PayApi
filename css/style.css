@@ -1,0 +1,380 @@
+
+/* FONTS */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700&display=swap');
+:root{
+    --body_font: 'Public Sans', sans-serif;
+    --heading_font: 'DM Serif Display', serif;
+}
+
+/* COLORS */
+
+:root{
+    --dark_pink: #ba4270;
+    --link_water_white: #fbfcfe;
+    --san_juan_blue: #36536b;
+    --mirage_blue: #1b262f;
+    --charm_pink: #da6d97;
+    --light_san_juan_blue: #6c8294;
+}
+
+/* TYPOGRAPHY */
+
+h1,
+h2,
+h3,
+h4{
+    font-family: var(--heading_font);
+    color: var(--san_juan_blue);
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+}
+
+h1{
+    font-size: 7.0rem;
+    line-height: 72px;
+}
+
+h2,h3{
+    font-size: 4.8rem;
+    line-height: 56px;
+}
+
+h4{
+    font-size: 1.8rem;
+    line-height: 25px;
+}
+
+body{
+    font-family: var(--body_font);
+    font-size: 1.5rem;
+    line-height: 28px;
+    font-weight: 400;
+    color: var(--light_san_juan_blue);
+    background-color: #EDF3F8;
+    overflow-x: hidden;
+}
+
+.btn,
+.nav_link,
+.link{
+    font-family: var(--body_font);
+    font-size: 1.5rem;
+    line-height: 18px;
+    font-weight: 700;
+}
+
+/* BUTTONS */
+
+.btn{
+    display: inline-block;
+    border-radius: 50px;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.btn_primary{
+    padding: 1.6rem 2.6rem;
+    color: var(--link_water_white);
+    background-color: var(--dark_pink);
+}
+
+.btn_secondary_light{
+    padding: 1.6rem 3.2rem;
+    color: var(--link_water_white);
+    border: 1px solid var(--link_water_white);
+}
+
+.btn_secondary_dark{
+    padding: 1.6rem 2.8rem;
+    color: var(--san_juan_blue);
+    border: 1px solid var(--san_juan_blue);
+}
+
+.btn_primary:hover{
+    background-color: var(--charm_pink);
+}
+
+.btn_secondary_light:hover{
+    background-color: var(--link_water_white);
+    color: var(--mirage_blue);
+    border-color: var(--link_water_white);
+}
+
+.btn_secondary_dark:hover{
+    background-color: var(--san_juan_blue);
+    color: var(--link_water_white);
+}
+
+.btn_disabled{
+    pointer-events: none;
+    opacity: .5;
+}
+
+.burger{
+    display: none;
+    width: 28px;
+    height: 17px;
+    background-image: url('../ico/burger.svg');
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: none;
+}
+
+/* FORM */
+
+.form{
+    width: 445px;
+    position: relative;
+    display: flex;
+}
+
+.form input{
+    flex-grow: 1;
+    padding: 15.5px 27px;
+    border-radius: 50px;
+    background-color: #fff;
+    box-shadow: rgba(54, 83, 107, 0.25) 10px 10px 25px -10px;
+    outline: 1px solid transparent;
+}
+
+input{
+    border: 1px solid transparent;
+}
+
+input::placeholder{
+    color: var(--san_juan_blue);
+    font-size: 1.5rem;
+    opacity: .5;
+}
+
+.form .btn{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+
+input:not(:placeholder-shown):not(:focus):invalid{
+    border-color:red;
+    color:#b20000
+}
+
+input:not(:placeholder-shown):not(:focus):valid{
+    border-color:#0f0;
+    color:#00b200
+}
+
+/* STYLES */
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before{
+    box-sizing: inherit;
+    outline: 0px solid #000;
+}
+
+a{
+    display: inline-block;
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+button{
+    border: none;
+    outline: none;
+}
+
+img{
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+.container{
+    max-width: 1110px;
+    padding: 0 15px;
+    margin: 0 auto;
+    box-sizing: content-box;
+    /* border: 1px solid #000; */
+}
+
+/* NAVBAR */
+
+nav .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+}
+
+.nav_brand{
+    display: block;
+    width: 135px;
+    height: 38px;
+    margin-right: 45px;
+}
+
+.nav_menu{
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+}
+
+.nav_item{
+    padding: 56px 20px;
+}
+
+.nav_item--m{
+    display: none;
+}
+
+.nav_link{
+    color: var(--san_juan_blue);
+    opacity: .7;
+    transition: .3s;
+}
+
+.nav_link:hover{
+    opacity: 1;
+}
+
+/* ENROLL */
+
+.enroll{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+/* FOOTER */
+
+footer{
+    background-color: var(--mirage_blue);
+    padding: 30px 0;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+
+footer::before{
+    content: '';
+    width: 780px;
+    height: 780px;
+    background-image: url('../img/bg.png');
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -135px;
+    right: -320px;
+    z-index: -1;
+}
+
+footer .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu_list{
+    display: flex;
+    align-items: center;
+}
+
+.icon_list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.fab{
+    display: block;
+    width: 20px;
+    height: 20px;
+    font-size: 2.5rem;
+    color: var(--link_water_white);
+    transition: .3s;
+}
+
+.item{
+    margin-right: 65px;
+}
+
+.item_logo{
+    display: block;
+    width: 135px;
+    height: 38px;
+}
+
+.link{
+    color: var(--link_water_white);
+    transition: .3s;
+    opacity: .7;
+}
+
+.link:hover{
+    opacity: 1;
+}
+
+.fab:hover{
+    color: var(--charm_pink);
+}
+
+/* MEDIA QUERIES */
+
+/* TABLET */
+
+@media only screen and (max-width: 768px){
+    .container{
+        /* max-width: 689px; */
+        max-width: 90%;
+    }
+    
+    .enroll{
+        flex-direction: column;
+    }
+
+    .enroll h2{
+        margin-bottom: 40px;
+    }
+}
+
+/* MOBILE */
+
+@media only screen and (max-width: 576px){
+    
+    nav{
+        padding-top: 40px;
+    }
+
+    .nav_menu{
+        display: none;
+    }
+
+    .burger{
+        display: block;
+    }
+
+    .btn--m{
+        display: none;
+    }
+}
