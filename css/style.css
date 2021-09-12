@@ -393,7 +393,7 @@ footer .container{
     }
 
     footer::before{
-        right: -38%;
+        left: -42%;
         top: 53%;
     }
 }
