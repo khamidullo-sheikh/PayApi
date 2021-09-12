@@ -114,16 +114,31 @@ body{
     opacity: .5;
 }
 
-.burger{
-    display: none;
-    width: 28px;
-    height: 17px;
+.burger,
+.button_close{
+    width: 20px;
+    height: 20px;
     background-image: url('../ico/burger.svg');
     background-position: center center;
     background-size: contain;
     background-repeat: no-repeat;
     border: none;
     background-color: transparent;
+}
+
+.button_close{
+    background-image: url('../ico/close.svg');
+    width: 30px;
+    height: 30px;
+}
+
+.menu_button{
+    position: relative;
+    border-bottom: 2px solid #404B56;
+    padding: 25px 0;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 9;
 }
 
 /* FORM */
@@ -210,7 +225,6 @@ img{
     padding: 0 15px;
     margin: 0 auto;
     box-sizing: content-box;
-    /* border: 1px solid #000; */
 }
 
 /* NAVBAR */
@@ -369,11 +383,57 @@ footer .container{
     }
 
     .nav_menu{
-        display: none;
+        flex-direction: column;
+        align-items: unset;
+        width: 70vw;
+        height: 100vh;
+        position: absolute;
+        top: -40px;
+        right: -15px;
+        z-index: 10;
+        background-color: var(--mirage_blue);
+        padding: 25px;
+        overflow: hidden;
+        transform: translateX(100vw);
+        transition: .3s;
     }
 
-    .burger{
+    .nav_menu--m{
+        transform: translateX(0);
+    }
+
+    .nav_menu::before{
+        content: '';
+        width: 780px;
+        height: 780px;
+        background-image: url('../img/bg.png');
+        background-position: -285px -535px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 8;
+    }
+
+    .nav_link{
+        color: var(--link_water_white);
+        font-size: 2rem;
+    }
+
+    .nav_item{
+        margin: 0 auto;
+        text-align: center;
+        padding: 30px;
+    }
+
+    .nav_item--m{
         display: block;
+    }
+
+    .nav_item--m a{
+        display: block;
+        text-align: center;
     }
 
     .btn--m{
@@ -393,7 +453,9 @@ footer .container{
     }
 
     footer::before{
-        left: -42%;
+        width: 100vw;
+        left: 0;
         top: 53%;
+        background-size: cover;
     }
 }
