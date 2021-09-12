@@ -319,10 +319,13 @@ h1{
 @media only screen and (max-width: 576px){
     .img_part{
         transform: translateX(20px);
+        width: 230px;
+        height: 360px;
     }
 
-    h2{
+    h1{
         font-size: 3.2rem;
+        line-height: 36px;
     }
 
     .text_part{
@@ -330,7 +333,7 @@ h1{
     }
 
     nav::before{
-        top: -650px;
+        top: -705px;
     }
 
     .form{
