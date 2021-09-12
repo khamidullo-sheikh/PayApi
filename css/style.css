@@ -128,8 +128,6 @@ body{
 
 .button_close{
     background-image: url('../ico/close.svg');
-    width: 30px;
-    height: 30px;
 }
 
 .menu_button{
@@ -390,7 +388,7 @@ footer .container{
         position: absolute;
         top: -40px;
         right: -15px;
-        z-index: 10;
+        z-index: 7;
         background-color: var(--mirage_blue);
         padding: 25px;
         overflow: hidden;
@@ -419,14 +417,19 @@ footer .container{
     .nav_link{
         color: var(--link_water_white);
         font-size: 2rem;
-        position: relative;
-        z-index: 9;
     }
 
     .nav_item{
         margin: 0 auto;
         text-align: center;
-        padding: 30px;
+        padding: 30px 0;
+        position: relative;
+        z-index: 9;
+    }
+
+    .nav_item--m{
+        position: relative;
+        z-index: 9;
     }
 
     .nav_item--m{
