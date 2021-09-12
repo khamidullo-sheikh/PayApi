@@ -419,6 +419,8 @@ footer .container{
     .nav_link{
         color: var(--link_water_white);
         font-size: 2rem;
+        position: relative;
+        z-index: 9;
     }
 
     .nav_item{
